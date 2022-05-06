@@ -43,9 +43,9 @@ public class CostcoTest {
         System.out.println("1test");
         System.setProperty("webdriver.chrome.driver", "c:\\\\data\\\\chromedriver.exe");
         
-//        ChromeOptions options = new ChromeOptions();
-//        options.addArguments("headless");
-//        ChromeDriver driver = new ChromeDriver(options);
+        ChromeOptions options = new ChromeOptions();
+       options.addArguments("headless");
+       ChromeDriver driver = new ChromeDriver(options);
         
         driver = new ChromeDriver();
         baseUrl = "https://www.google.com/";
@@ -57,16 +57,17 @@ public class CostcoTest {
         driver.findElement(By.id("search-field")).clear();
         driver.findElement(By.id("search-field")).sendKeys("dell laptop");
         driver.findElement(By.id("formcatsearch")).submit();
-        //Thread.sleep(3000);
+        Thread.sleep(3000);
         test2AddToCart();
     }
 //Add to cart
  
     public void test2AddToCart() throws Exception {
         System.out.println("2test");
-
+        Thread.sleep(3000);
+       
         JavascriptExecutor js = (JavascriptExecutor) driver;
-        js.executeScript("window.scrollTo(0, 200)");
+        js.executeScript("window.scrollTo(0, 100)");
         
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//img[@automation-id=\"productImageLink_0\"]")));

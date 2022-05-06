@@ -66,7 +66,7 @@ public class CostcoTest {
         System.out.println("2test");
         Thread.sleep(3000);
        
-        JavascriptExecutor js = (JavascriptExecutor) driver;
+        //JavascriptExecutor js = (JavascriptExecutor) driver;
         //js.executeScript("window.scrollTo(0, 100)");
         
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
@@ -90,7 +90,7 @@ public class CostcoTest {
         //Go to cart        
         driver.findElement(By.id("cart-d")).click();
 
-        //JavascriptExecutor js = (JavascriptExecutor) driver;
+        JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("window.scrollTo(0, 400)");
 
         driver.findElement(By.id("shopCartCheckoutSubmitButton")).click();

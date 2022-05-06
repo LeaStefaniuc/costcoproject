@@ -67,7 +67,7 @@ public class CostcoTest {
         Thread.sleep(3000);
        
         JavascriptExecutor js = (JavascriptExecutor) driver;
-        js.executeScript("window.scrollTo(0, 100)");
+        //js.executeScript("window.scrollTo(0, 100)");
         
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//img[@automation-id=\"productImageLink_0\"]")));
